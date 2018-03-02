@@ -1,0 +1,85 @@
+@import "reset";
+.table th {
+    font-weight: 300;
+    padding-left: 50px;
+}
+.Facturen{
+  background-color: #f9fafb;
+  header{
+    height: 100px;
+    background-color: #101b56;
+    border: solid 1px black;
+    width: 100%;
+    .header{
+      margin-top: 25px;
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      display: grid;
+      grid-template-columns: 0.5fr 5fr 0.5fr 0.5fr;
+    }
+    a{
+      color: white;
+      margin: auto;
+      &:hover{
+        color: darkgrey;
+      }
+    }
+  }
+  .container {
+    width: 90%;
+    margin: auto;
+    .legende{
+      display: grid;
+      grid-template-columns: 0.5fr 1fr 3fr 1fr 1fr 1fr 0.5fr;
+      line-height: 60px;
+      align-content: center;
+      p{
+        text-decoration: underline;
+        color: darkgray;
+        font-family: 'Montserrat', sans-serif;
+      }
+      input {
+        align-self: center;
+        margin: auto;
+        width: 16px;
+        height: 16px;
+      }
+    }
+    ul {
+      li {
+        height: 75px;
+        width: 100%;
+        border: 1px solid;
+        border-color: #e1e1e1;
+        margin: 15px 0;
+        background-color: #ffffff;
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 3fr 1fr 1fr 1fr 0.5fr;
+        line-height: 60px;
+        align-content: center;
+        input {
+          align-self: center;
+          margin: auto;
+          width: 16px;
+          height: 16px;
+        }
+        .Status{
+          color: greenyellow;
+        }
+        .client{
+          font-weight: bold;
+        }
+        p {
+          font-family: 'Montserrat', sans-serif;
+          i {
+            font-size: 16px;
+            margin-left: 35%;
+            &:hover{
+              color: darkgrey;
+            }
+          }
+        }
+      }
+    }
+  }
+}
