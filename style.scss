@@ -44,6 +44,13 @@
         width: 16px;
         height: 16px;
       }
+      a{
+        margin-left: 20px;
+        font-size: 20px;
+        &:hover{
+          color: darkgrey;
+        }
+      }
     }
     ul {
       li {
