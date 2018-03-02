@@ -1,10 +1,41 @@
 @import "reset";
-.table th {
-    font-weight: 300;
-    padding-left: 50px;
-}
 .Facturen{
   background-color: #f9fafb;
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #101b56;
+    border-right:2px solid darkgrey;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+      &:hover {
+        color: #f1f1f1;
+      }
+    }
+    .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+  }
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
   header{
     height: 100px;
     background-color: #101b56;
@@ -53,7 +84,203 @@
       }
     }
     ul {
+        li {
+          &:hover{
+            border: 2px solid #878787;
+          }
+          height: 75px;
+          width: 100%;
+          border: 1px solid;
+          border-color: #e1e1e1;
+          margin: 15px 0;
+          background-color: #ffffff;
+          display: grid;
+          grid-template-columns: 0.5fr 1fr 3fr 1fr 1fr 1fr 0.5fr;
+          line-height: 60px;
+          align-content: center;
+          input {
+            align-self: center;
+            margin: auto;
+            width: 16px;
+            height: 16px;
+          }
+          .Status {
+            color: greenyellow;
+          }
+          .client {
+            font-weight: bold;
+          }
+          p {
+            font-family: 'Montserrat', sans-serif;
+            i {
+              font-size: 16px;
+              margin-left: 35%;
+              &:hover {
+                color: darkgrey;
+              }
+            }
+          }
+        }
+    }
+  }
+}
+.New_Invoice{
+  header{
+    height: 100px;
+    background-color: #101b56;
+    border: solid 1px black;
+    width: 100%;
+    margin-bottom: 25px;
+    .header{
+      margin-top: 25px;
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      display: grid;
+      grid-template-columns: 0.5fr 5fr 0.5fr 0.5fr;
+    }
+    a{
+      color: white;
+      margin: auto;
+      &:hover{
+        color: darkgrey;
+      }
+    }
+  }
+  .parent {
+    width: 50%;
+    height: 50vh;
+    background-color: #f9fafb;
+    margin: auto;
+    border: 1px solid gray;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+    .inputs {
+      width: 100%;
+      height: 50%;
+      background-color: #f9fafb;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      input {
+        width: 80%;
+        height: 24px;
+        border-style: none;
+        border-bottom: 1px solid gray;
+        background-color: #f9fafb;
+        color: darkgrey;
+        margin-top: 25px;
+        margin-left: 13px;
+        font-family: 'Montserrat', sans-serif;
+
+        &:focus {
+          outline: none;
+        }
+      }
+      select {
+        width: 80%;
+        height: 24px;
+        margin-top: 25px;
+        margin-left: 13px;
+        border-style: none;
+        border-bottom: 1px solid gray;
+        background-color: #f9fafb;
+        color: darkgrey;
+        font-family: 'Montserrat', sans-serif;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}
+.clients{
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: lightgray;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    font-family: 'Montserrat', sans-serif;
+    a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+      &:hover {
+        color: #f1f1f1;
+      }
+    }
+    .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+  }
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  header{
+    height: 100px;
+    background-color: lightgray;
+    width: 100%;
+    .header{
+      margin-top: 25px;
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      display: grid;
+      grid-template-columns: 0.5fr 5fr 0.5fr 0.5fr;
+    }
+    a{
+      color: white;
+      margin: auto;
+      &:hover{
+        color: darkgrey;
+      }
+    }
+  }
+  .container {
+    width: 90%;
+    margin: auto;
+    .legende{
+      display: grid;
+      grid-template-columns: 1fr 1.5fr 3fr 1fr 0.5fr;
+      line-height: 60px;
+      align-content: center;
+      p{
+        text-decoration: underline;
+        color: darkgray;
+        font-family: 'Montserrat', sans-serif;
+      }
+      input {
+        align-self: center;
+        margin: auto;
+        width: 16px;
+        height: 16px;
+      }
+      a{
+        margin-left: 20px;
+        font-size: 20px;
+        &:hover{
+          color: darkgrey;
+        }
+      }
+    }
+    ul {
       li {
+        &:hover{
+          border: 2px solid #878787;
+        }
         height: 75px;
         width: 100%;
         border: 1px solid;
@@ -61,7 +288,7 @@
         margin: 15px 0;
         background-color: #ffffff;
         display: grid;
-        grid-template-columns: 0.5fr 1fr 3fr 1fr 1fr 1fr 0.5fr;
+        grid-template-columns: 1fr 1.5fr 3fr 1fr 0.5fr;
         line-height: 60px;
         align-content: center;
         input {
@@ -70,10 +297,10 @@
           width: 16px;
           height: 16px;
         }
-        .Status{
+        .Status {
           color: greenyellow;
         }
-        .client{
+        .client {
           font-weight: bold;
         }
         p {
@@ -81,7 +308,7 @@
           i {
             font-size: 16px;
             margin-left: 35%;
-            &:hover{
+            &:hover {
               color: darkgrey;
             }
           }

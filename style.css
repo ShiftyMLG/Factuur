@@ -217,12 +217,40 @@ template {
 ul {
   list-style: none; }
 
-.table th {
-  font-weight: 300;
-  padding-left: 50px; }
-
 .Facturen {
   background-color: #f9fafb; }
+  .Facturen .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #101b56;
+    border-right: 2px solid darkgrey;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px; }
+    .Facturen .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s; }
+      .Facturen .sidenav a:hover {
+        color: #f1f1f1; }
+    .Facturen .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px; }
+  @media screen and (max-height: 450px) {
+    .Facturen .sidenav {
+      padding-top: 15px; }
+    .Facturen .sidenav a {
+      font-size: 18px; } }
   .Facturen header {
     height: 100px;
     background-color: #101b56;
@@ -256,6 +284,11 @@ ul {
         margin: auto;
         width: 16px;
         height: 16px; }
+      .Facturen .container .legende a {
+        margin-left: 20px;
+        font-size: 20px; }
+        .Facturen .container .legende a:hover {
+          color: darkgrey; }
     .Facturen .container ul li {
       height: 75px;
       width: 100%;
@@ -267,6 +300,8 @@ ul {
       grid-template-columns: 0.5fr 1fr 3fr 1fr 1fr 1fr 0.5fr;
       line-height: 60px;
       align-content: center; }
+      .Facturen .container ul li:hover {
+        border: 2px solid #878787; }
       .Facturen .container ul li input {
         align-self: center;
         margin: auto;
@@ -283,5 +318,161 @@ ul {
           margin-left: 35%; }
           .Facturen .container ul li p i:hover {
             color: darkgrey; }
+
+.New_Invoice header {
+  height: 100px;
+  background-color: #101b56;
+  border: solid 1px black;
+  width: 100%;
+  margin-bottom: 25px; }
+  .New_Invoice header .header {
+    margin-top: 25px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    display: grid;
+    grid-template-columns: 0.5fr 5fr 0.5fr 0.5fr; }
+  .New_Invoice header a {
+    color: white;
+    margin: auto; }
+    .New_Invoice header a:hover {
+      color: darkgrey; }
+.New_Invoice .parent {
+  width: 50%;
+  height: 50vh;
+  background-color: #f9fafb;
+  margin: auto;
+  border: 1px solid gray;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px; }
+  .New_Invoice .parent .inputs {
+    width: 100%;
+    height: 50%;
+    background-color: #f9fafb;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+    .New_Invoice .parent .inputs input {
+      width: 80%;
+      height: 24px;
+      border-style: none;
+      border-bottom: 1px solid gray;
+      background-color: #f9fafb;
+      color: darkgrey;
+      margin-top: 25px;
+      margin-left: 13px;
+      font-family: 'Montserrat', sans-serif; }
+      .New_Invoice .parent .inputs input:focus {
+        outline: none; }
+    .New_Invoice .parent .inputs select {
+      width: 80%;
+      height: 24px;
+      margin-top: 25px;
+      margin-left: 13px;
+      border-style: none;
+      border-bottom: 1px solid gray;
+      background-color: #f9fafb;
+      color: darkgrey;
+      font-family: 'Montserrat', sans-serif; }
+      .New_Invoice .parent .inputs select:focus {
+        outline: none; }
+
+.clients .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: lightgray;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  font-family: 'Montserrat', sans-serif; }
+  .clients .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s; }
+    .clients .sidenav a:hover {
+      color: #f1f1f1; }
+  .clients .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px; }
+@media screen and (max-height: 450px) {
+  .clients .sidenav {
+    padding-top: 15px; }
+  .clients .sidenav a {
+    font-size: 18px; } }
+.clients header {
+  height: 100px;
+  background-color: lightgray;
+  width: 100%; }
+  .clients header .header {
+    margin-top: 25px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    display: grid;
+    grid-template-columns: 0.5fr 5fr 0.5fr 0.5fr; }
+  .clients header a {
+    color: white;
+    margin: auto; }
+    .clients header a:hover {
+      color: darkgrey; }
+.clients .container {
+  width: 90%;
+  margin: auto; }
+  .clients .container .legende {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 3fr 1fr 0.5fr;
+    line-height: 60px;
+    align-content: center; }
+    .clients .container .legende p {
+      text-decoration: underline;
+      color: darkgray;
+      font-family: 'Montserrat', sans-serif; }
+    .clients .container .legende input {
+      align-self: center;
+      margin: auto;
+      width: 16px;
+      height: 16px; }
+    .clients .container .legende a {
+      margin-left: 20px;
+      font-size: 20px; }
+      .clients .container .legende a:hover {
+        color: darkgrey; }
+  .clients .container ul li {
+    height: 75px;
+    width: 100%;
+    border: 1px solid;
+    border-color: #e1e1e1;
+    margin: 15px 0;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 3fr 1fr 0.5fr;
+    line-height: 60px;
+    align-content: center; }
+    .clients .container ul li:hover {
+      border: 2px solid #878787; }
+    .clients .container ul li input {
+      align-self: center;
+      margin: auto;
+      width: 16px;
+      height: 16px; }
+    .clients .container ul li .Status {
+      color: greenyellow; }
+    .clients .container ul li .client {
+      font-weight: bold; }
+    .clients .container ul li p {
+      font-family: 'Montserrat', sans-serif; }
+      .clients .container ul li p i {
+        font-size: 16px;
+        margin-left: 35%; }
+        .clients .container ul li p i:hover {
+          color: darkgrey; }
 
 /*# sourceMappingURL=style.css.map */

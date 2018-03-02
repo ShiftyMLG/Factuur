@@ -11,8 +11,13 @@
 <body class="Facturen">
 <div>
   <header>
+    <div id="Sidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="Facturen.html">Facturen</a>
+      <a href="clients.html">Klanten</a>
+    </div>
     <div class="header">
-      <a href="#"><i class="fas fa-arrow-left"></i></a>
+      <span style="font-size:24px;cursor:pointer; margin-left: 15px" onclick="openNav()">&#9776;</span>
       <p>Factuurlijst</p>
     </div>
   </header>
@@ -25,8 +30,18 @@
             <p>Bedrag</p>
             <p>Vervaldatum</p>
             <p class="Status">Status</p>
+            <a href="new_invoice.html"><i class="far fa-plus-square"></i></a>
           </div>
         <ul>
+            <li>
+              <input type="checkbox">
+              <p>V 001</p>
+              <p class="client">Supermarkt Carrefour</p>
+              <p>€ 200</p>
+              <p>18 Jan 2018</p>
+              <p class="Status">Status</p>
+              <p><a href="#"><i class="fas fa-info-circle"></i></a></p>
+            </li>
           <li>
             <input type="checkbox">
             <p>V 001</p>
@@ -94,5 +109,14 @@
       </div>
 </main>
 </div>
+<script>
+  function openNav() {
+    document.getElementById("Sidenav").style.width = "250px";
+  }
+
+  function closeNav() {
+    document.getElementById("Sidenav").style.width = "0";
+  }
+</script>
 </body>
 </html>
